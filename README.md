@@ -47,9 +47,3 @@ Ziyaretçilerin site sahibi ile kolayca iletişim kurabilmesi için, tüm form e
 * **CSS** dosyası harici olarak eklenmiş ve tüm stil yönetimi bu dosya üzerinden yapılmıştır.
 
 ---
-
-
-## GitHub & Hosting
-
-* Proje GitHub üzerinde versiyonlanmaktadır. Proje ilerledikçe minimum 10 farklı commit yapılacaktır.
-* Proje, ücretsiz bir hosting servisi (000webhost, InfinityFree vb.)
