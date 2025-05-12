@@ -20,9 +20,9 @@ Kullanıcının eğitim ve kariyer geçmişini detaylı bir şekilde gösterebil
 
 Bu sayfa ile kullanıcının memleketini veya sevdiği bir şehri tanıtmayı hedefledik. Şehrin nüfusu, gezilecek yerleri ve önemli bilgilerini kullanıcı dostu bir arayüzle sunduk. Ayrıca, ziyaretçilerin şehri daha iyi keşfedebilmesi adına, bir slider yapısı ekledik. Bu slider üzerindeki görsellere tıklanarak, o mekan hakkında daha fazla bilgi alınabiliyor.
 
-### Mirasımız / Takımımız Sayfası
+### Mirasımız Sayfası
 
-Şehrin kültürel mirasını veya spor takımını tanıtan bir sayfa oluşturduk. HTML elemanlarını kullanarak, hem görsel hem de bilgilendirici bir yapı oluşturmayı amaçladık. Bu sayede, ziyaretçilerin şehre ait önemli değerlere kolayca erişebilmesini sağladık.
+Şehrin kültürel mirasını tanıtan bir sayfa oluşturduk. HTML elemanlarını kullanarak, hem görsel hem de bilgilendirici bir yapı oluşturmayı amaçladık. Bu sayede, ziyaretçilerin şehre ait önemli değerlere kolayca erişebilmesini sağladık.
 
 ### İlgi Alanlarım Sayfası
 
