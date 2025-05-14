@@ -90,9 +90,15 @@ h1 {
 }
 
 h3, h4 {
-    color: #b14650;
+    color: #b14650 !important;
     margin-top: 20px;
 }
+
+h5 {
+    color: #b14650 !important;
+    margin-top: 20px;
+}
+
 
 ul {
     color: #ffffff;
