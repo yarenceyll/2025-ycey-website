@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-person-circle me-2"></i>Yaren Ceylan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-1"></i>Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv.html"><i class="bi bi-file-earmark-text me-1"></i>CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ilgi-alanlarim.html"><i class="bi bi-heart me-1"></i>İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehrim.html"><i class="bi bi-building me-1"></i>Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mirasimiz.html"><i class="bi bi-shield-check me-1"></i>Mirasımız</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html"><i class="bi bi-envelope me-1"></i>İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right me-1"></i>Giriş Yap</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <div id="app" class="container my-5">
+        <h2 class="text-center text-light mb-4"><i class="bi bi-envelope me-3"></i>İletişim Formu</h2>
+<hr>
+       <form @submit.prevent="handleSubmit" method="POST" action="form-submit.php">
+
+      <div class="row">
+      <!-- sol sütun -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="ad" class="form-label">AD</label>
+          <input type="text" class="form-control" id="ad" name="ad" v-model="form.ad">
+        </div>
+
+        <div class="mb-3">
+          <label for="soyad" class="form-label">SOYAD</label>
+          <input type="text" class="form-control" id="soyad" name="soyad" v-model="form.soyad">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">CİNSİYET</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="kadın" value="Kadın" name="cinsiyet" v-model="form.cinsiyet">
+            <label class="form-check-label text-light" for="kadın">Kadın</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="erkek" value="Erkek" name="cinsiyet" v-model="form.cinsiyet">
+            <label class="form-check-label text-light" for="erkek">Erkek</label>
+          </div>
+        </div>
+      </div>
+
+        <!-- sağ sütun -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="email" class="form-label">E-POSTA</label>
+          <input type="email" class="form-control" id="email" name="email" v-model="form.email">
+        </div>
+
+        <div class="mb-3">
+          <label for="tel" class="form-label">TELEFON</label>
+          <input type="text" class="form-control" id="tel" name="tel" v-model="form.tel">
+        </div>
+      </div>
+    </div>
+
+      <div class="mb-3">
+      <label for="konu" class="form-label">KONU</label>
+      <select class="form-select" id="konu" name="konu" v-model="form.konu">
+        <option value="">Seçiniz</option>
+        <option>Öneri</option>
+        <option>Destek</option>
+        <option>Şikayet</option>
+        <option>Diğer</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="mesaj" class="form-label">MESAJ</label>
+      <textarea class="form-control" id="mesaj" name="mesaj" rows="4" v-model="form.mesaj"></textarea>
+    </div>
+      
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" @click="temizle">Temizle</button>
+        <button type="submit" class="btn btn-success">Gönder</button>
+      </div>
+    </form>
+  </div>
+
+        <!-- Footer -->
+    <footer class="footer-custom text-center py-3 mt-3">
+        <div class="container">
+            <p class="mb-0">© 2024 Yaren Ceylan - Tüm Hakları Saklıdır</p> 
+            <p class="mb-0">
+                <a href="iletisim.html" class="text-white text-decoration-none mx-2"> 
+                    <i class="bi bi-envelope"></i> İletişim
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+</body>
+</html>
