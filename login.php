@@ -2,26 +2,26 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
+
     // Email format kontrolü
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("Location: login.html?error=invalid_email");
         exit();
     }
-    
+
     // Sakarya Üniversitesi email kontrolü
-    if (!email.includes('@ogr.sakarya.edu.tr')) {
+    if (strpos($email, '@ogr.sakarya.edu.tr') === false) {
         header("Location: login.html?error=invalid_sakarya_email");
         exit();
     }
-    
+
     // Şifre kontrolü (emailin kullanıcı adı kısmı)
     $username = explode('@', $email)[0];
     if ($password !== $username) {
         header("Location: login.html?error=wrong_password");
         exit();
     }
-    
+
     // Başarılı giriş
     echo "<!DOCTYPE html>
     <html lang='tr'>
