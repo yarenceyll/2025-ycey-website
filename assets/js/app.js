@@ -95,4 +95,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             })
     });
+
+    document.querySelectorAll('#ankaraSlider a').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // varsayılan anında atlama engelleniyor
+      
+      const targetId = this.getAttribute('href').substring(1); // # işaretini kaldır
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        // Ekranın ortasına gelecek şekilde scroll hesapla
+        const elementRect = targetElement.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.pageYOffset;
+        const middleOfScreen = window.innerHeight / 2;
+        const scrollToPosition = absoluteElementTop - middleOfScreen + (targetElement.offsetHeight / 2);
+
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 });
