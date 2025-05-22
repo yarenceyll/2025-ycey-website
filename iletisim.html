@@ -54,7 +54,7 @@
     <div id="app" class="container my-5">
         <h2 class="text-center text-light mb-4"><i class="bi bi-envelope me-3"></i>İletişim Formu</h2>
 <hr>
-       <form @submit.prevent="handleSubmit" method="POST" action="form-submit.php">
+      <form @submit.prevent="handleSubmit" method="POST" action="form-submit.php" enctype="multipart/form-data">
 
       <div class="row">
       <!-- sol sütun -->
@@ -111,6 +111,83 @@
       <label for="mesaj" class="form-label">MESAJ</label>
       <textarea class="form-control" id="mesaj" name="mesaj" rows="4" v-model="form.mesaj"></textarea>
     </div>
+
+    <div class="mb-3">
+      <label for="dosya" class="form-label">DOSYA YÜKLE</label>
+      <input type="file" class="form-control" id="dosya" name="dosya" v-model="form.dosya">
+    </div>
+
+    <div class="row">
+      <!-- Sol Sütun -->
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="yas" class="form-label">YAŞINIZ</label>
+          <input type="number" class="form-control" id="yas" name="yas" v-model="form.yas">
+        </div>
+
+        <div class="mb-3">
+          <label for="tarih" class="form-label">DOĞUM TARİHİNİZ</label>
+          <input type="date" class="form-control" id="tarih" name="tarih" v-model="form.tarih">
+        </div>
+
+        <div class="mb-3">
+          <label for="saat" class="form-label">RANDEVU SAATİ</label>
+          <input type="time" class="form-control" id="saat" name="saat" v-model="form.saat">
+        </div>
+      </div>
+
+
+      <!-- Sağ Sütun -->
+       <div class="col-md-6">
+        <div class="mb-3">
+          <label for="renk" class="form-label">RENK</label>
+          <div class="p-1 border rounded bg-white">
+            <input type="color" class="form-control-color w-100 border-0" id="renk" name="renk" v-model="form.renk" title="Bir renk seçin" style="height: 36px;">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="memnuniyet" class="form-label">MEMNUNİYETİNİZ</label>
+          <input type="range" class="form-range" id="memnuniyet" name="memnuniyet" min="0" max="100" v-model="form.memnuniyet">
+        </div>
+
+        <div class="mt-3">
+          <label for="buton" class="form-label">Tıklayınız!</label>
+          <button type="button" class="btn btn-danger w-100" onclick="window.open('https://www.youtube.com', '_blank')">
+            <i class="bi bi-youtube me-2"></i>YouTube’a Git
+          </button>
+        </div>
+      </div>
+     </div>
+
+    <div class="mb-3">
+      <label for="gizlilik" class="form-label">SOSYAL MEDYA</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="facebook" name="facebook" v-model="form.facebook">
+        <label class="form-check-label text-light" for="facebook">Facebook</label>  
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="twitter" name="twitter" v-model="form.twitter">
+        <label class="form-check-label text-light" for="twitter">Twitter</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="instagram" name="instagram" v-model="form.instagram">
+        <label class="form-check-label text-light" for="instagram">Instagram</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="linkedin" name="linkedin" v-model="form.linkedin">
+        <label class="form-check-label text-light" for="linkedin">LinkedIn</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="whatsapp" name="whatsapp" v-model="form.whatsapp">
+        <label class="form-check-label text-light" for="whatsapp">WhatsApp</label>
+      </div>
+    </div>
+
+    
+
+    
+    
       
       <div class="d-flex justify-content-between">
         <button type="button" class="btn btn-secondary" @click="temizle">Temizle</button>
