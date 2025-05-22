@@ -114,9 +114,11 @@
     opacity: 0.9;
 }
 
+
+
 h2 {
-    font-size: 1.75rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     color: #b14650;
 }
 
@@ -128,6 +130,8 @@ h2 {
     text-decoration-thickness: 3px;
     animation: highlightPulse 1s ease-in-out infinite;
 }
+
+
 
 @keyframes highlightPulse {
     0% { text-shadow: 0 0 5px rgba(255, 107, 129, 0.5); }

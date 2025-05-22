@@ -139,18 +139,32 @@ ul li:before {
 }
 
 /* Footer Stilleri */
-footer {
-    margin-top: auto;
-}
-
 .footer-custom {
-    background-color: #410d12 !important; 
+    background-color: #410d12 !important;
     color: white !important;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+     flex-shrink: 0
 }
 
+/* BODY AYARI */
+.min-vh-100 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+/* İÇERİK KISMI */
+.main-content {
+  flex: 1 0 auto; /* esnek büyüyen alan */
+  display: flex;
+  justify-content: center;  /* yatay ortalama */
+  align-items: center;      /* dikey ortalama */
+  padding: 20px 0;
+}
 
-/* CV SAYFASI İçin stiller */
+/* CV SAYFASI İçin */
 .timeline {
     position: relative;
     padding-left: 1.5rem;
@@ -249,6 +263,7 @@ button.btn-success:hover {
   background-color: #6b232e;
   border-color: #5a1f28;
 }
+
 
 /* Responsive küçük ekranlarda sütunlar tam genişlik olsun */
 @media (max-width: 767.98px) {
